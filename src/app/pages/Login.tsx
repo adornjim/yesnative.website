@@ -66,10 +66,18 @@ export default function Login() {
           <div className="bg-[#2E4D3E] dark:bg-[#0E1612] py-10 px-8 text-center border-b border-gray-100/5 dark:border-[#1E3026] relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#C5A55A]/5 rounded-full blur-3xl pointer-events-none" />
             <Link to="/" className="inline-block group mb-4">
-              <img 
-                src="/images/logo.png" 
-                alt="Yes Native" 
-                className="h-16 w-auto mx-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              <div 
+                className="h-16 w-16 mx-auto bg-white dark:bg-[#C5A55A] group-hover:bg-[#C5A55A] dark:group-hover:bg-white transition-all duration-300"
+                style={{
+                  maskImage: "url('/images/logo.png')",
+                  WebkitMaskImage: "url('/images/logo.png')",
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center"
+                }}
               />
             </Link>
             <h1 className="text-2xl text-white dark:text-[#C5A55A] font-bold font-serif tracking-widest leading-none">

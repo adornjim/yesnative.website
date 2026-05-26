@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Leaf } from "lucide-react";
 
 export default function SplashScreen() {
   const [visible, setVisible] = useState(true);
@@ -44,9 +43,20 @@ export default function SplashScreen() {
 
       {/* Animated Content Wrapper */}
       <div className="flex flex-col items-center space-y-6 relative z-10 text-center px-4">
-        {/* Rotating gold brand motif icon */}
         <div className="relative flex items-center justify-center p-6 bg-white/5 backdrop-blur-md rounded-full border border-white/10 shadow-2xl animate-[float_4s_ease-in-out_infinite]">
-          <Leaf className="w-16 h-16 text-[#C5A55A] transform rotate-12 transition-transform hover:rotate-45" />
+          <div 
+            className="w-16 h-16 bg-[#C5A55A] transform rotate-12 transition-transform hover:rotate-45"
+            style={{
+              maskImage: "url('/images/logo.png')",
+              WebkitMaskImage: "url('/images/logo.png')",
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              maskRepeat: "no-repeat",
+              WebkitMaskRepeat: "no-repeat",
+              maskPosition: "center",
+              WebkitMaskPosition: "center"
+            }}
+          />
           <div className="absolute inset-0 border-2 border-dashed border-[#C5A55A]/30 rounded-full animate-[spin_20s_linear_infinite]" />
         </div>
 

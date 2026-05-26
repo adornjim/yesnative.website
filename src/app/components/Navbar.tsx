@@ -74,12 +74,17 @@ export default function Navbar() {
         }`}>
           {/* Logo Brand with Image */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src="/images/logo.png" 
-              alt="Yes Native Logo" 
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              onError={(e) => {
-                (e.target as HTMLElement).style.display = "none";
+            <div 
+              className="h-10 sm:h-12 w-10 sm:w-12 bg-[#2E4D3E] dark:bg-[#C5A55A] group-hover:bg-[#C5A55A] dark:group-hover:bg-white transition-all duration-300"
+              style={{
+                maskImage: "url('/images/logo.png')",
+                WebkitMaskImage: "url('/images/logo.png')",
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+                maskPosition: "center",
+                WebkitMaskPosition: "center"
               }}
             />
             <span className="text-xl sm:text-2xl font-bold text-[#2E4D3E] dark:text-[#C5A55A] font-serif group-hover:text-[#C5A55A] dark:group-hover:text-white transition-colors leading-none tracking-tight">
